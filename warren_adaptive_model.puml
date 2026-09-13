@@ -1,0 +1,65 @@
+@startuml warren_adaptive_model_uml
+' The Warren Adaptive Model - UML Activity Diagram
+' CSC505 Critical Thinking | C. Warren
+' Adapted from Pressman & Maxim (2020); feedback loops from Agile (Beck et al., 2001),
+' Spiral risk analysis (Boehm, 1988), and DevOps continuous delivery (Humble & Farley, 2010).
+
+title <b>The Warren Adaptive Model</b>\n<size:11>UML Activity Diagram | CSC505 Critical Thinking | Adapted from Pressman & Maxim (2020)</size>
+
+skinparam dpi 180
+skinparam shadowing false
+skinparam defaultFontName Segoe UI
+skinparam ActivityBackgroundColor #DBEAFE
+skinparam ActivityBorderColor #1D4ED8
+skinparam ActivityBorderThickness 1.5
+skinparam ActivityFontColor #1E3A8A
+skinparam ActivityDiamondBackgroundColor #FEF3C7
+skinparam ActivityDiamondBorderColor #B45309
+skinparam ActivityDiamondFontColor #78350F
+skinparam ArrowColor #111827
+skinparam ArrowFontColor #B45309
+skinparam NoteBackgroundColor #FFF7ED
+skinparam NoteBorderColor #B45309
+skinparam NoteFontColor #7C2D12
+skinparam TitleFontSize 20
+
+start
+
+repeat
+  :<b>1. Discovery & Communication</b>\n<size:11>Continuous stakeholder collaboration; evolving</size>\n<size:11>requirements captured as a prioritized backlog</size>;
+
+  :<b>2. Adaptive Planning</b>\n<size:11>Rolling-wave estimates, risk analysis (Spiral),</size>\n<size:11>re-planned at every iteration boundary</size>;
+
+  note right
+    Every phase ends with a
+    <b>feedback checkpoint</b>: failed
+    reviews loop work back one
+    phase instead of letting
+    defects flow downstream
+    (Royce, 1970)
+  end note
+
+  repeat
+    :<b>3. Iterative Modeling</b>\n<size:11>Lightweight analysis & design; prototypes</size>\n<size:11>validated with users before construction</size>;
+
+    :<b>4. Incremental Construction</b>\n<size:11>Short build-test cycles; test-driven development,</size>\n<size:11>continuous integration, peer review</size>;
+
+  backward :refine design\n& rebuild;
+  repeat while (Increment accepted?) is ([no]) not ([yes])
+
+  :<b>5. Continuous Deployment & Monitoring</b>\n<size:11>Automated delivery pipeline (DevOps); telemetry</size>\n<size:11>and user feedback feed the next increment</size>;
+
+backward :continuous feedback loop:\ntelemetry, user feedback,\nnew requirements;
+repeat while (Continue product evolution?) is ([yes]\nnext increment) not ([no])
+
+:product retired /\nmajor release milestone;
+
+stop
+
+legend bottom
+  <b>Warren Adaptive Model</b> - C. Warren, CSC505.
+  Feedback loops adapted from Agile (Beck et al., 2001), Spiral risk
+  analysis (Boehm, 1988), and DevOps continuous delivery (Humble & Farley, 2010).
+end legend
+
+@enduml

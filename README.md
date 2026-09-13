@@ -14,7 +14,8 @@ and DevOps practices.
 | File | Description |
 | --- | --- |
 | `Warren_Waterfall_Evaluation.docx` | Written evaluation of the Waterfall Model's limitations and the design rationale for the Warren Adaptive Model, with APA references |
-| `warren_adaptive_model_uml.png` | UML activity diagram of the Warren Adaptive Model (phases, decision gate, feedback loops) |
+| `warren_adaptive_model_uml.png` | UML activity diagram of the Warren Adaptive Model (phases, decision gates, feedback loops) |
+| `warren_adaptive_model.puml` | PlantUML source for the UML diagram (render with `java -jar plantuml.jar -tpng warren_adaptive_model.puml`) |
 | `warren_model.py` | Interactive Python script that prompts for each phase name/description and prints a formatted model summary |
 | `screenshots/warren_model_execution_screenshot.png` | Screenshot of a successful program run |
 
