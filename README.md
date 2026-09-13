@@ -5,8 +5,9 @@ design of a modernized process model, the **Warren Adaptive Model**, which keeps
 Waterfall's five-phase structure but embeds feedback loops from Agile, Spiral,
 and DevOps practices.
 
-**Author:** C. Warren
-**Course:** CSC505 - Principles of Software Development
+**Author:** C. Warren  
+**Course:** CSC505 - Principles of Software Development  
+**Repository:** https://github.com/cwarrendev/csc505-critical-thinking-2
 
 ## Contents
 
