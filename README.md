@@ -29,6 +29,10 @@ Five phases, each ending in a feedback checkpoint rather than a one-way gate:
 4. **Incremental Construction** - short build-test cycles with TDD, continuous integration, and peer review, followed by an "increment accepted?" decision gate
 5. **Continuous Deployment & Monitoring** - automated delivery pipeline; production telemetry and user feedback feed the next increment's backlog
 
+### UML activity diagram
+
+![UML activity diagram of the Warren Adaptive Model](warren_adaptive_model_uml.png)
+
 ## Running the script
 
 The script uses only the Python standard library (Python 3.9+):
